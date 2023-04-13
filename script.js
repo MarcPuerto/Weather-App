@@ -17,6 +17,7 @@ async function getWeather(location) {
     throwErrorMsg();
   } else {
     const weatherData = await response.json();
+    hideErrorMsg();
     let data = bindData(weatherData);
     displayData(data);
   }
@@ -36,9 +37,19 @@ function bindData(weatherData){
     return webData;
 }
 
+const error = document.getElementById("error-msg");
+
+function throwErrorMsg(){
+    error.classList.remove("hide");
+    error.classList.add("display");
+}
+
+function hideErrorMsg(){
+    error.classList.add("hide");
+    error.classList.remove("display");
+}
 
 function displayData(webData){
-    console.log(webData)
     country[0].textContent = webData.country
     city[0].textContent = webData.name
     temp[0].textContent = webData.temp + " Cº"
@@ -46,4 +57,13 @@ function displayData(webData){
     img_weather.setAttribute("src", 'http://' + webData.temp_img);
 }
 
+const searchBar = document.getElementById('search');
+
+searchBar.addEventListener('keydown', function(event) {
+  if (event.keyCode === 13) {
+    getWeather(searchBar.value);
+  }
+});
+
+//init
 getWeather("London");

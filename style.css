@@ -42,14 +42,30 @@ h1 {
 
 /* CONTAINER */
 
-
 section{
-    justify-content: center;
+    height: -webkit-fill-available;
     display: flex;
     align-items: center;
-    height: -webkit-fill-available;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.temp_container{
+    display: flex;
+    align-items: center;
+}
+
+.blurred-card {
+    width: 25%;
+    padding: 0.7rem;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+  
 .temp-main-container{
     margin: 1rem;
 }
@@ -64,7 +80,18 @@ section{
     font-weight: bold;
 }
 
+#error-msg{
+    color: red;
+    margin: 1rem;
+}
 
+.display{
+    display: flex;
+}
+
+.hide{
+    display: none;
+}
 /*IMAGES*/
 
 .icon {
