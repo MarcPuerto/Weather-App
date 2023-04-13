@@ -6,7 +6,7 @@ Simple weather app with searchbar and simple error control. Odin project exercic
 
 ## Screenshots
 
-![App Screenshot](https://i.imgur.com/eutayNs.png)
+![App Screenshot](https://imgur.com/a/QS1Ym13)
 
 ## Authors
 
