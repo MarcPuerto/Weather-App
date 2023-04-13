@@ -41,7 +41,7 @@ function displayData(webData){
     console.log(webData)
     country[0].textContent = webData.country
     city[0].textContent = webData.name
-    temp[0].textContent = webData.temp
+    temp[0].textContent = webData.temp + " Cº"
     localtime[0].textContent = webData.localtime
     img_weather.setAttribute("src", 'http://' + webData.temp_img);
 }
